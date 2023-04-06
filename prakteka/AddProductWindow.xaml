@@ -1,0 +1,55 @@
+﻿<Window x:Class="prakteka.AddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prakteka"
+        mc:Ignorable="d"
+        Title="Окно управления продуктами" Height="450" Width="800" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Артикул" Grid.Row="0"/>
+        <Label Content="Наимменование" Grid.Row="1"/>
+        <Label Content="Единица измерения" Grid.Row="2"/>
+        <Label Content="Цена" Grid.Row="3"/>
+        <Label Content="Максимальная скидка" Grid.Row="4"/>
+        <Label Content="Производитель" Grid.Row="5"/>
+        <Label Content="Поставщик" Grid.Row="6"/>
+        <Label Content="Категория" Grid.Row="7"/>
+        <Label Content="действующая скидка" Grid.Row="8"/>
+        <Label Content="Количество в наличии" Grid.Row="9"/>
+        <Label Content="Описание" Grid.Row="10"/>
+
+        <TextBox x:Name="txtArticle" Grid.Column="1"/>
+        <TextBox x:Name="txtName" Grid.Column="1" Grid.Row="1"/>
+        <ComboBox Name="cbUnit" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10 0" DisplayMemberPath="name"/>
+        <TextBox x:Name="txtPrice" Grid.Column="1" Grid.Row="3"/>
+        <TextBox x:Name="txtMaxDiscount" Grid.Column="1" Grid.Row="4"/>
+        <ComboBox Name="cbManufacturer" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10 0" DisplayMemberPath="name"/>
+        <ComboBox Name="cbProvider" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10 0" DisplayMemberPath="name"/>
+        <ComboBox Name="cbCategory" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10 0" DisplayMemberPath="name"/>
+        <TextBox x:Name="txtDiscount" Grid.Column="1" Grid.Row="8"/>
+        <TextBox x:Name="txtCount" Grid.Column="1" Grid.Row="9"/>
+        <TextBox x:Name="txtDescription" Grid.Column="1" Grid.Row="10"/>
+
+        <Button x:Name="btnAdd" Content="Сохранить" Grid.Column="1" Grid.Row="11" Click="btnAdd_Click"/>
+        <Button x:Name="btnCancel" Content="Отменить" Grid.Column="0" Grid.Row="11" Click="btnCancel_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="prakteka.OrderListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prakteka"
+        mc:Ignorable="d"
+        Title="Окно списка заказов" Height="450" Width="870">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="btnEdit" Content="Редактировать" Click="btnEdit_Click" Margin="5 0"/>
+            <Button x:Name="btnDelete" Content="Удалить" Click="btnDelete_Click" Margin="5 0"/>
+            <Label Content="сортировать по:"/>
+            <ComboBox x:Name="cbSort" Width="100" SelectionChanged="cbSort_SelectionChanged"/>
+            <Label Content="Размер скидки: "/>
+            <ComboBox x:Name="cbDiscount" Width="100" SelectionChanged="cbDiscount_SelectionChanged"/>
+
+            <Button x:Name="btnClear" Content="Очистить фильтры" Click="btnClear_Click" Margin="5"/>
+            <Button x:Name="btnProducts" Content="Товары" Click="btnProducts_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="dgOrders" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding id}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DataGrid>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="состав заказа" Binding="{Binding}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="дата заказа" Binding="{Binding dateOfOrder}"/>
+                <DataGridTextColumn Header="дата доставки" Binding="{Binding dateOfDelivery}"/>
+                <DataGridTextColumn Header="Сумма заказа" Binding="{Binding}"/>
+                <DataGridTextColumn Header="ФИО клиента" Binding="{Binding Users.FIO}"/>
+                <DataGridTextColumn Header="Статус заказа" Binding="{Binding Statuses.name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

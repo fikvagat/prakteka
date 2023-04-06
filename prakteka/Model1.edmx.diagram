@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="24b2740aab8344a2ba6bd6fdbaaa5667" Name="Diagram1">
+        <EntityTypeShape EntityType="prakteka_deModel.Categories" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Manufacturers" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Orders" Width="1.5" PointX="6" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.PointsOfIssue" Width="1.5" PointX="3.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Products" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.ProductsInOrder" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Providers" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Requests" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Roles" Width="1.5" PointX="1.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.SalesHistory" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Statuses" Width="1.5" PointX="3.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Units" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.Users" Width="1.5" PointX="3.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="prakteka_deModel.VW_ProductsDetails" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="prakteka_deModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Products_Manufacturers" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Orders_PointsOfIssue" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Orders_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_ProductsInOrder_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Products_Providers" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Products_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_ProductsInOrder_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_SalesHistory_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Requests_Providers" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Requests_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="prakteka_deModel.FK_Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

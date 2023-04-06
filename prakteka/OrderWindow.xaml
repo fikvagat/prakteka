@@ -1,0 +1,44 @@
+﻿<Window x:Class="prakteka.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prakteka"
+        mc:Ignorable="d"
+        Title="Окно нового заказа" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WrapPanel VerticalAlignment="Center">
+            <Label Content="Общая сумма заказа: "/>
+            <Label Name="lblSum" Content="0"/>
+            <Label Content="Пункт выдачи: "/>
+            <ComboBox x:Name="cbPI" DisplayMemberPath="address" Width="150"/>
+            <Button x:Name="btnSave" Content="Сохранить" Margin="10 0" Click="btnSave_Click"/>
+            <Button x:Name="btnCancel" Content="Отменить заказ" Margin="10 0" Click="btnCancel_Click"/>
+        </WrapPanel>
+
+        <DataGrid x:Name="dgOrder" Grid.Row="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding image}" MaxHeight="100" MaxWidth="100"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Товар" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Единица замерения" Binding="{Binding Units.name}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding price}"/>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding Manufacturers.name}"/>
+                <DataGridTextColumn Header="Поставщик" Binding="{Binding Providers.name}"/>
+                <DataGridTextColumn Header="Категория" Binding="{Binding Categories.name}"/>
+                <DataGridTextColumn Header="Скидка" Binding="{Binding discount}"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding count}"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
